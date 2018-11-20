@@ -5,6 +5,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link href="../css/reset.css" rel="stylesheet">
 	<link href="../css/mainStyle.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta charset="UTF-8">
 	<title>All Types</title>
 	<style>
@@ -24,9 +25,15 @@
 			line-height: 22px;
 			font-family: "Roboto", sans-serif;
 			font-size: 18px;
+			text-align: justify;
+		}
+		span{
+			line-height: 22px;
+			font-family: "Roboto", sans-serif;
+			font-size: 18px;
 		}
 		ul{
-			margin-left: 15px;
+			margin-left: 20px;
 			line-height: 22px;
 			font-family: "Roboto", sans-serif;
 			font-size: 18px;
@@ -34,7 +41,7 @@
 			list-style-image: url('../images/ulImage.png');
 		}
 		ol{
-			margin-left: 15px;
+			margin-left: 20px;
 			line-height: 22px;
 			font-family: "Roboto", sans-serif;
 			font-size: 18px;
@@ -88,21 +95,53 @@
 		}
 		
 		/* These are generic items to use. */
+		.horizonContainer{
+			margin: 0px;
+			padding: 0px;
+			width: 100%;
+			height: 400px;
+			border-radius: 0px;
+			border: none;
+			mix-blend-mode: exclusion;
+			font-size: 62px;
+			font-variant: small-caps;
+			text-align: center;
+			overflow: hidden;
+			
+		}
+		.horizonContainerText{
+			margin: 0px;
+			padding: 0px;
+			font-size: 62px;
+			font-weight: bold;
+			font-variant: small-caps;
+			text-align: center;
+			position: relative;
+			bottom: -250px;
+		}
 		.navigation{
 			list-style-type: none;
 			list-style-image: none;
 			margin: 0;
 			padding: 0;
-			width: 200px;
+			overflow: hidden;
+			background-color: #333;
 			background-color: #F1F1F1;
+			border-radius: 15px;
+			font-family: "Roboto", sans-serif;
+			font-size: 28px;
 		}
 		.navigation ul{
 			list-style-type: none;
 			list-style-image: none;
+			overflow: hidden;
 			margin: 0;
 			padding: 0;
 			width: 200px;
 			background-color: #F1F1F1;
+		}
+		.navigation li{
+			float: left;
 		}
 		.navigation a{
 			display: block;
@@ -111,12 +150,49 @@
 			text-decoration: none;
 		}
 		.navigation a:hover {
+			border-radius: 15px;
 			background-color: #555;
 			color: white;
 		}
 		
+		.splitterContainer{
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			flex-direction: row;
+		}
+		.leftContainer{
+			width: 300px;
+			border: none;
+			display: flex;
+			flex-direction: column;
+		}
+		.rightContainer{
+			width: 100%;
+			border: none;
+			border-radius: 0px;
+			border-left: 1px solid #F6F6F6;
+		}
+		
+		.projectContainer{
+			display: flex;
+			fex-direction: row;
+		}
+		.projectContainerImage{
+			max-width: 200px;
+			max-height: 200px;
+		}
+		.projectContainerContent{
+			border: none;
+			border-radius: 0px;
+			border-left: 1px solid #F6F6F6;
+		}
+		
 		.mainContainer{
 			margin: 1%;
+			margin-left: auto;
+			margin-right: auto;
+			width: 80%;
 		}
 		.heading{
 			font-size: 36px;
@@ -126,49 +202,55 @@
 			font-size: 28px;
 		}
 		.subHeading{
-			font-size: 20px;
+			font-size: 22px;
 		}
 	</style>
 	
 </head>
 
 <body>
-	<div class="mainContainer">
-		<div class="heading">
-			This is a heading
-		</div>
-		<div class="smallHeading">
-			<p>This is a small heading</p>
-		</div>
-		<div class="subHeading">
-			<p>This is a sub heading</p>
-		</div>
-		<p>This is a paragraph</p>
-		<button>This is a button</button>
-		<input placeholder="Type here"/>
-		<div class="profilePicContainer">
-			<img src="https://via.placeholder.com/300x350"/>
-		</div>
-		<ul>
-			<li>This is an unordered list</li>
-			<li>This is an unordered list</li>
-			<li>This is an unordered list</li>
-			<li>This is an unordered list</li>
-			<li>This is an unordered list</li>
-			<li>This is an unordered list</li>
-		</ul>
-		<ol>
-			<li>This is an ordered list</li>
-			<li>This is an ordered list</li>
-			<li>This is an ordered list</li>
-			<li>This is an ordered list</li>
-			<li>This is an ordered list</li>
-			<li>This is an ordered list</li>
-		</ol>
-		<ul class="navigation">
-			<li><a href="#home">Home</a></li>
-		</ul>
+	<div class="horizonContainer" style="background-image: url('https://images.freeimages.com/images/large-previews/338/sunset-over-lake-2-1377767.jpg');">
+		<!--img src="https://images.freeimages.com/images/large-previews/338/sunset-over-lake-2-1377767.jpg"/-->
+		<span class="horizonContainerText">Greenman<span>
 	</div>
+	<div class="mainContainer">
+		<ul class="navigation">
+			<li><a href="#about">About</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+		<div class="splitterContainer">
+			<div class="leftContainer">
+				<img src="https://via.placeholder.com/300x350"/>
+				<div>
+					<img style="float: left;" src="https://via.placeholder.com/50x50"/>
+					<span class="subHeading">
+						Bio: 
+					</span>
+					<span>Something something about me. Something something about me. Something something about me. Something something about me. Something something about me. Something something about me. Something something about me. Something something about me. Something something about me. Something something about me. Something something about me. Something something about me. Something something about me. Something something about me. </span>
+				</div>
+			</div>
+			<div class="rightContainer">
+				<p class="smallHeading">This is a small heading</p>
+				<p>Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! </p>
+			</div>
+		</div>
+	</div>
+	<div id="portfolio" class="horizonContainer" style="background-image: url('https://images.freeimages.com/images/large-previews/6c9/sky-1390196.jpg');">
+		<!--img src="https://images.freeimages.com/images/large-previews/338/sunset-over-lake-2-1377767.jpg"/-->
+		<span class="horizonContainerText" style="color: white;">My Portfolio<span>
+	</div>
+	<div class="mainContainer">
+		<div  class="projectContainer">
+			<img class="projectContainerImage" src="https://via.placeholder.com/200x200"/>
+			<div class="projectContainerContent" class="rightContainer">
+				<p class="smallHeading">Project name</p>
+				<p>Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! Something something this should work! </p>
+				<a href="">See this project on Github</a>
+			</div>
+		</div>
+	</div>
+	
 </body>
 
 </html>
